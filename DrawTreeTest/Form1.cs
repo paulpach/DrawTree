@@ -18,7 +18,7 @@ namespace DrawTreeTest
         private const int NODE_MARGIN_Y = 40;
 
         private static Pen NODE_PEN = Pens.Gray;
-        
+
         private List<SampleDataModel> _data;
         private TreeNodeModel<SampleDataModel> _tree;
 
@@ -43,30 +43,86 @@ namespace DrawTreeTest
         {
             var sampleTree = new List<SampleDataModel>();
 
-            // Root Node
+            /*
+             // Root Node
+             sampleTree.Add(new SampleDataModel { Id = "O", ParentId = string.Empty, Name = "Test GP O" });
+
+             // 1st Level
+             sampleTree.Add(new SampleDataModel { Id = "E", ParentId = "O", Name = "Test Node E" });
+             sampleTree.Add(new SampleDataModel { Id = "F", ParentId = "O", Name = "Test Node F" });
+             sampleTree.Add(new SampleDataModel { Id = "N", ParentId = "O", Name = "Test Node N" });
+
+             // 2nd Level
+             sampleTree.Add(new SampleDataModel { Id = "A", ParentId = "E", Name = "Test Node A" });
+             sampleTree.Add(new SampleDataModel { Id = "D", ParentId = "E", Name = "Test Node D" });
+
+             sampleTree.Add(new SampleDataModel { Id = "G", ParentId = "N", Name = "Test Node G" });
+             sampleTree.Add(new SampleDataModel { Id = "M", ParentId = "N", Name = "Test Node M" });
+
+             // 3rd Level
+             sampleTree.Add(new SampleDataModel { Id = "B", ParentId = "D", Name = "Test Node B" });
+             sampleTree.Add(new SampleDataModel { Id = "C", ParentId = "D", Name = "Test Node C" });
+
+             sampleTree.Add(new SampleDataModel { Id = "H", ParentId = "M", Name = "Test Node H" });
+             sampleTree.Add(new SampleDataModel { Id = "I", ParentId = "M", Name = "Test Node I" });
+             sampleTree.Add(new SampleDataModel { Id = "J", ParentId = "M", Name = "Test Node J" });
+             sampleTree.Add(new SampleDataModel { Id = "K", ParentId = "M", Name = "Test Node K" });
+             sampleTree.Add(new SampleDataModel { Id = "L", ParentId = "M", Name = "Test Node L" });
+
+        */
+
+            /*
             sampleTree.Add(new SampleDataModel { Id = "O", ParentId = string.Empty, Name = "Test GP O" });
-
-            // 1st Level
-            sampleTree.Add(new SampleDataModel { Id = "E", ParentId = "O", Name = "Test Node E" });
-            sampleTree.Add(new SampleDataModel { Id = "F", ParentId = "O", Name = "Test Node F" });
             sampleTree.Add(new SampleDataModel { Id = "N", ParentId = "O", Name = "Test Node N" });
-
-            // 2nd Level
+            sampleTree.Add(new SampleDataModel { Id = "F", ParentId = "O", Name = "Test Node F" });
+            sampleTree.Add(new SampleDataModel { Id = "E", ParentId = "O", Name = "Test Node E" });
+            sampleTree.Add(new SampleDataModel { Id = "2", ParentId = "F", Name = "Test Node F" });
+            sampleTree.Add(new SampleDataModel { Id = "B", ParentId = "N", Name = "Test Node N" });
             sampleTree.Add(new SampleDataModel { Id = "A", ParentId = "E", Name = "Test Node A" });
             sampleTree.Add(new SampleDataModel { Id = "D", ParentId = "E", Name = "Test Node D" });
+            sampleTree.Add(new SampleDataModel { Id = "Z", ParentId = "E", Name = "Test Node D" });
+            sampleTree.Add(new SampleDataModel { Id = "Y", ParentId = "A", Name = "Test Node A" });
+            sampleTree.Add(new SampleDataModel { Id = "Q", ParentId = "A", Name = "Test Node A" });
+            sampleTree.Add(new SampleDataModel { Id = "U", ParentId = "D", Name = "Test Node A" });
+            sampleTree.Add(new SampleDataModel { Id = "W", ParentId = "D", Name = "Test Node A" });
+            sampleTree.Add(new SampleDataModel { Id = "R", ParentId = "Z", Name = "Test Node D" });
+            */
 
-            sampleTree.Add(new SampleDataModel { Id = "G", ParentId = "N", Name = "Test Node G" });
-            sampleTree.Add(new SampleDataModel { Id = "M", ParentId = "N", Name = "Test Node M" });
-
-            // 3rd Level
-            sampleTree.Add(new SampleDataModel { Id = "B", ParentId = "D", Name = "Test Node B" });
-            sampleTree.Add(new SampleDataModel { Id = "C", ParentId = "D", Name = "Test Node C" });
-
-            sampleTree.Add(new SampleDataModel { Id = "H", ParentId = "M", Name = "Test Node H" });
-            sampleTree.Add(new SampleDataModel { Id = "I", ParentId = "M", Name = "Test Node I" });
-            sampleTree.Add(new SampleDataModel { Id = "J", ParentId = "M", Name = "Test Node J" });
-            sampleTree.Add(new SampleDataModel { Id = "K", ParentId = "M", Name = "Test Node K" });
-            sampleTree.Add(new SampleDataModel { Id = "L", ParentId = "M", Name = "Test Node L" });
+            sampleTree.Add(new SampleDataModel { Id = "TO", ParentId = string.Empty, Name = "Test GP O" });
+            sampleTree.Add(new SampleDataModel { Id = "JW", ParentId = "TO", Name = "TO" });
+            sampleTree.Add(new SampleDataModel { Id = "BK", ParentId = "JW", Name = "JW" });
+            sampleTree.Add(new SampleDataModel { Id = "WH", ParentId = "BK", Name = "BK" });
+            sampleTree.Add(new SampleDataModel { Id = "SE", ParentId = "BK", Name = "BK" });
+            sampleTree.Add(new SampleDataModel { Id = "QI", ParentId = "BK", Name = "BK" });
+            sampleTree.Add(new SampleDataModel { Id = "KX", ParentId = "BK", Name = "BK" });
+            sampleTree.Add(new SampleDataModel { Id = "KA", ParentId = "KX", Name = "KX" });
+            sampleTree.Add(new SampleDataModel { Id = "HH", ParentId = "JW", Name = "JW" });
+            sampleTree.Add(new SampleDataModel { Id = "DN", ParentId = "HH", Name = "HH" });
+            sampleTree.Add(new SampleDataModel { Id = "KT", ParentId = "HH", Name = "HH" });
+            sampleTree.Add(new SampleDataModel { Id = "JB", ParentId = "KT", Name = "KT" });
+            sampleTree.Add(new SampleDataModel { Id = "UM", ParentId = "KT", Name = "KT" });
+            sampleTree.Add(new SampleDataModel { Id = "AL", ParentId = "KT", Name = "KT" });
+            sampleTree.Add(new SampleDataModel { Id = "FR", ParentId = "KT", Name = "KT" });
+            sampleTree.Add(new SampleDataModel { Id = "WE", ParentId = "HH", Name = "HH" });
+            sampleTree.Add(new SampleDataModel { Id = "CO", ParentId = "WE", Name = "WE" });
+            sampleTree.Add(new SampleDataModel { Id = "LE", ParentId = "WE", Name = "WE" });
+            sampleTree.Add(new SampleDataModel { Id = "LO", ParentId = "WE", Name = "WE" });
+            sampleTree.Add(new SampleDataModel { Id = "YI", ParentId = "HH", Name = "HH" });
+            sampleTree.Add(new SampleDataModel { Id = "EI", ParentId = "YI", Name = "YI" });
+            sampleTree.Add(new SampleDataModel { Id = "DJ", ParentId = "YI", Name = "YI" });
+            sampleTree.Add(new SampleDataModel { Id = "SH", ParentId = "YI", Name = "YI" });
+            sampleTree.Add(new SampleDataModel { Id = "BS", ParentId = "JW", Name = "JW" });
+            sampleTree.Add(new SampleDataModel { Id = "SP", ParentId = "BS", Name = "BS" });
+            sampleTree.Add(new SampleDataModel { Id = "SB", ParentId = "JW", Name = "JW" });
+            sampleTree.Add(new SampleDataModel { Id = "GQ", ParentId = "SB", Name = "SB" });
+            sampleTree.Add(new SampleDataModel { Id = "JS", ParentId = "GQ", Name = "GQ" });
+            sampleTree.Add(new SampleDataModel { Id = "HT", ParentId = "SB", Name = "SB" });
+            sampleTree.Add(new SampleDataModel { Id = "MB", ParentId = "HT", Name = "HT" });
+            sampleTree.Add(new SampleDataModel { Id = "MF", ParentId = "HT", Name = "HT" });
+            sampleTree.Add(new SampleDataModel { Id = "FW", ParentId = "SB", Name = "SB" });
+            sampleTree.Add(new SampleDataModel { Id = "GM", ParentId = "FW", Name = "FW" });
+            sampleTree.Add(new SampleDataModel { Id = "XT", ParentId = "FW", Name = "FW" });
+            sampleTree.Add(new SampleDataModel { Id = "VQ", ParentId = "FW", Name = "FW" });
 
             return sampleTree;
         }
@@ -106,7 +162,7 @@ namespace DrawTreeTest
             e.Graphics.Clear(Color.White);
             DrawNode(_tree, e.Graphics);
         }
-        
+
         private void CalculateControlSize()
         {
             // tree sizes are 0-based, so add 1
