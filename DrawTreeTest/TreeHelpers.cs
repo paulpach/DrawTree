@@ -132,28 +132,33 @@ namespace DrawTreeTest
                     var distance = nodeContour[level] - siblingContour[level];
                     if (distance + shiftValue < minDistance)
                     {
-                        shiftValue = minDistance - distance;
+                        shiftValue = Math.Max(minDistance - distance, shiftValue);
                     }
                 }
  
                 if (shiftValue > 0)
                 {
-                    node.X += shiftValue;
-                    node.Mod += shiftValue;
 
                     CenterNodesBetween(node, sibling);
 
-                    shiftValue = 0;
                 }
  
                 sibling = sibling.GetNextSibling();
+            }
+
+            if (shiftValue > 0)
+            {
+                node.X += shiftValue;
+                node.Mod += shiftValue;
+                shiftValue = 0;
+
             }
         }
 
         private static void CenterNodesBetween(TreeNodeModel<T> leftNode, TreeNodeModel<T> rightNode)
         {
-            var leftIndex = leftNode.Parent.Children.IndexOf(rightNode);
-            var rightIndex = leftNode.Parent.Children.IndexOf(leftNode);
+            var leftIndex = leftNode.Parent.Children.IndexOf(leftNode);
+            var rightIndex = leftNode.Parent.Children.IndexOf(rightNode);
                     
             var numNodesBetween = (rightIndex - leftIndex) - 1;
 
